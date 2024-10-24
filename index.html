@@ -50,6 +50,7 @@
       font-weight: 600;
       cursor: pointer;
       position: relative;
+      transition: 0.5s;
     }
 
     .nav-button img {
@@ -76,6 +77,7 @@
       padding: 10px 0;
       text-align: center;
       min-width: 100%;
+      transition: 0.5s;
     }
 
     .menu a {
@@ -83,6 +85,7 @@
       padding: 10px 20px;
       text-decoration: none;
       display: block;
+      transition: 0.5s;
     }
 
     .menu a:hover {
@@ -156,14 +159,16 @@
       font-weight: 600;
       width: 10%;
       cursor: pointer;
+      transition: 0.5s;
     }
     .hero button:hover{
       padding: 5px;
       border: solid 2px white;
       border-radius: 5px;
       background: none;
+      background-color: whitesmoke;
       position: absolute;
-      color: #dacb93;
+      color: #343a40;
       margin-top: 23%;
       left: 59px;
       text-align: center;
@@ -240,6 +245,7 @@
       top: 46.9%;
       left: 15.9%;
       cursor: pointer;
+      transition: 0.5s;
     }
     #kiki-but:hover{
       align-items: center;
@@ -362,6 +368,7 @@
       width: 17%;
       align-items: center;
       cursor: pointer;
+      transition: 0.5s;
     }
 
     #howl-but:hover{
@@ -429,6 +436,7 @@
       width: 17%;
       align-items: center;
       cursor: pointer;
+      transition: 0.5s;
     }
 
     #spirit-but:hover{
@@ -455,19 +463,25 @@
       background-color: #03071e;
     }
 
-    #film-section h1{
+    #filmography-title {
+      margin-bottom: 25px; 
       color: goldenrod;
       font-size: 50px;
       text-align: center;
       justify-content: center;
     }
 
-    .cotainer{
-      display: flex;
+    .divider{
+      display: inline-flex;
+    }
+
+    #cotainer{
+      display: inline-flex;
       justify-content: center;
       min-height: 100vh;
     }
-    .card{
+    .front{
+      margin-left: 48px;
       position: relative;
       width: 320px;
       height: 450px;
@@ -476,12 +490,13 @@
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     } 
 
-    .card .poster{
+    .front .poster{
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
 
-    .card .poster::before{
+    .front .poster::before{
       content: '';
       position: absolute;
       bottom: -180px;
@@ -492,60 +507,102 @@
       z-index: 1;
     }
 
-    .card:hover .poster::before{
+    .front:hover .poster::before{
       bottom: 0px;
     }
 
-    .card .poster img{
+    .front .poster img{
       width: 100%; 
       transition: 0.5s;
     }
     
-    .card:hover .poster img{
+    .front:hover .poster img{
      transform: translateY(-25px);
      filter: blur(5px);
     }
 
-    .card .details{
+    .front .details{
       position: absolute;
       width: 100%;
-      bottom: 0;
+       bottom: -295px;
       left: 0;
       z-index: 2;
       padding: 20px;
       transition: 0.5s;
+      cursor: pointer;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
     }
 
-    .card .details h3{
+
+    .front .details h3{
       font-size: 0.8em;
       color: #fff;
+      margin: 0; 
     }
 
-    .card .details .rating{
+    .front .details .rating{
       position: relative;
       padding: 5px 0;
     }
 
-    .card .details .ratings .fa-star{
+    .front .details .ratings .fa-star{
       color: goldenrod;
       font-size: 1em;
+      margin-top: 5px;
     }
 
-    .card .details .ratings span{
+    .front .details .ratings span{
       color: whitesmoke;
     }
 
-    .card .details .info{
+    .front .details .info{
       color: whitesmoke;
-
+      margin-top: 6px;
+      line-height: 150%;
+      text-align: justify;
     }
-    
-    .card:hover .details{
+
+    .filmb button {
+      margin-top: 10px; 
+      border: goldenrod solid 3px;
+      border-radius: 5px;
+      background-color: goldenrod;
+      color: black; 
+      transition: 0.5s;
+      margin-right: 1.5%;
+      font-size: medium;
+      width: 30%;
+      text-align: center;
+      cursor: pointer;
+      justify-content: center;
+    }
+
+    .filmb:hover button{
+      margin-top: 10px; 
+      border: #343a40 solid 3px;
+      border-radius: 5px;
+      background-color: #343a40;
+      color: whitesmoke; 
+    }
+
+    .front:hover .details{
       bottom: 40px
     }
 
-    .card .details .flogo{
+    .front .details .flogo{
       max-width: 180px;
+    }  
+    
+    .flogo2{
+      max-width: 160px;
+    }
+
+    .front .details .flogo2 {
+      max-width: 160px;
+      margin-bottom: 4px; 
     }
 
     .gradient-background {
@@ -630,14 +687,14 @@
               <div class="category">
                 <div class="card1">
                  <div class="ft2">
-                   <img src="IMG/howl-web.jpg" alt="how-ft" id="ft2">
+                   <img src="IMG/howl-web.png" alt="how-ft" id="ft2">
                     <h3 id="ft2h" class="kanit-medium">Howl's Moving Castle</h3>
                       <p id="ft2p">
                         Sophie, a quiet girl working in a hat shop, finds her life thrown into turmoil when she is literally swept off her feet by a handsome but mysterious wizard named Howl.
                       </p>
                         <ul id="howl-list">
                           <li>Directed by Hayao Miyazaki</li>
-                          <li>Rated G</li>
+                          <li>Rated PG</li>
                           <li>119 min</li>
                         </ul>
                       <button id="howl-but" class="kanit-medium" onclick="document.location='howl.html'">About</button>
@@ -652,7 +709,7 @@
                       </p>
                         <ul id="spirit-list">
                           <li>Directed by Hayao Miyazaki</li>
-                          <li>Rated G</li>
+                          <li>Rated PG</li>
                           <li>125 min</li>
                         </ul>
                       <button id="spirit-but" class="kanit-medium" onclick="document.location='spirit.html'">About</button>
@@ -661,15 +718,49 @@
               </div>
     </div>
   </div>
-<div id="film-section">
-  <h1 class="kanit-medium">FILMOGRAPHY</h1>
-    <div class="container">
-      <div class="card">
+
+<!-- film section -->
+  
+  <div id="film-section">
+    <h1 id="filmography-title" class="kanit-medium">FILMOGRAPHY</h1>
+    <div class="divider">
+      <div id="container">
+        <div class="front">
+          <div class="poster">
+            <img src="IMG/ponyo-web-page.jpg" alt="ponyo">
+          </div>
+          <div class="details">
+            <img src="IMG/Ponyo_Logo.png" alt="ponyo" class="flogo">
+            <h3 class="kanit-medium">Directed by Hayao Miyazaki</h3>
+            <div class="ratings">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span style="font-family: 'Trebuchet MS';">4/5</span>
+              <div class="info">
+                <p>
+                  A five-year-old boy develops a relationship with Ponyo, a young goldfish princess who longs to become a human after falling in love with him.
+                </p>
+              </div>
+              <div class="filmb">
+                <button class="kanit-medium" onclick="document.location='ponyo.html'">About</button>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+ <!-- My Neighbor Totoro -->
+
+    <div id="container">
+      <div class="front">
         <div class="poster">
-          <img src="IMG/ponyo-web-page.jpg" alt="ponyo">
+          <img src="IMG/Totoro-Web.jpg" alt="Totoro">
         </div>
         <div class="details">
-          <img src="IMG/Ponyo_Logo.png" alt="ponyo" class="flogo">
+          <img src="IMG/totoro-logo.png" alt="Totoro" class="flogo2">
           <h3 class="kanit-medium">Directed by Hayao Miyazaki</h3>
           <div class="ratings">
             <i class="fa-solid fa-star"></i>
@@ -680,13 +771,77 @@
             <span style="font-family: 'Trebuchet MS';">4/5</span>
             <div class="info">
               <p>
-                A five-year-old boy develops a relationship with Ponyo, a young goldfish princess who longs to become a human after falling in love with him.
+                When two girls move to the country to be near their ailing mother, they have adventures with the wondrous forest spirits who live nearby.
               </p>
+            </div>
+            <div class="filmb">
+              <button class="kanit-medium" onclick="document.location='totoro.html'">About</button>
             </div>
           </div> 
         </div>
       </div>
     </div>
+
+ <!-- Howl's Moving Castle -->
+    
+    <div id="container">
+      <div class="front">
+        <div class="poster">
+          <img src="IMG/howl-web.png" alt="howl">
+        </div>
+        <div class="details">
+          <img src="IMG/howl-logo.jpg" alt="howl" class="flogo">
+          <h3 class="kanit-medium">Directed by Hayao Miyazaki</h3>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span style="font-family: 'Trebuchet MS';">4/5</span>
+            <div class="info">
+              <p>
+                When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.
+              </p>
+            </div>
+            <div class="filmb">
+              <button class="kanit-medium" onclick="document.location='howl.html'">About</button>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  
+ <!-- Spirited-Away -->
+
+    <div id="container">
+      <div class="front">
+        <div class="poster">
+          <img src="IMG/Spirited-Away-Web.jpg" alt="Spirited-Away">
+        </div>
+        <div class="details">
+          <img src="IMG/Spirited-logo.png" alt="Spirited-Away" class="flogo">
+          <h3 class="kanit-medium">Directed by Hayao Miyazaki</h3>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span style="font-family: 'Trebuchet MS';">4/5</span>
+            <div class="info">
+              <p>
+                During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches and spirits, and where humans are changed into beasts.
+              </p>
+            </div>
+            <div class="filmb">
+              <button class="kanit-medium" onclick="document.location='spirit.html'">About</button>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

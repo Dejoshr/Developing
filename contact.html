@@ -394,73 +394,6 @@
         background-position: 0% 50%;
       }
     }
-
-    .container-fluid {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background: #FFF;
-    }
-
-    .cube {
-      position: absolute;
-      top: 80vh;
-      left: 45vw;
-      width: 10px;
-      height: 10px;
-      border: solid 1px #D7D4E4;
-      transform-origin: top left;
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      animation: cube 12s ease-in forwards infinite;
-    }
-
-    .cube:nth-child(2n) {
-      border-color: #FFF;
-    }
-
-    .cube:nth-child(2) {
-      animation-delay: 2s;
-      left: 25vw;
-      top: 40vh;
-    }
-
-    .cube:nth-child(3) {
-      animation-delay: 4s;
-      left: 75vw;
-      top: 50vh;
-    }
-
-    .cube:nth-child(4) {
-      animation-delay: 6s;
-      left: 90vw;
-      top: 10vh;
-    }
-
-    .cube:nth-child(5) {
-      animation-delay: 8s;
-      left: 10vw;
-      top: 85vh;
-    }
-
-    .cube:nth-child(6) {
-      animation-delay: 10s;
-      left: 50vw;
-      top: 10vh;
-    }
-
-    @keyframes cube {
-      from {
-        transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        opacity: 1;
-      }
-
-      to {
-        transform: scale(20) rotate(960deg) translate(-50%, -50%);
-        opacity: 0;
-      }
-    }
-
   </style>
 </head>
 
@@ -481,43 +414,35 @@
 
   <!-- Profile Section -->
 
-  <div class="container-fluid">
-    <div id="hero" class="gradient-background">
-      <div class="content">
-        <h1>Hello,<br>I'm Josh</h1>
-        <p>
-          I'm Joshua Aguila, a BSIT student driven by a passion for tech growth. Outside academics, I love reading,
-          singing, and modeling as creative outlets, with a special focus on web design. Check my profiles down below!
-        </p>
-        <div class="wrapper">
-          <div class="socmed" onclick="document.location='https://www.facebook.com/theycallme.fj'">
-            <div class="icon"><i class="fab fa-facebook"></i></div>
-            <span>Facebook</span>
-          </div>
-          <div class="socmed" onclick="document.location='https://x.com/theycallme_fj'">
-            <div class="icon"><i class="fab fa-twitter"></i></div>
-            <span>Twitter</span>
-          </div>
-          <div class="socmed" onclick="document.location='https://www.instagram.com/theycallme_fj/'">
-            <div class="icon"><i class="fab fa-instagram"></i></div>
-            <span>Instagram</span>
-          </div>
-          <div class="socmed" onclick="document.location='https://ph.pinterest.com/franceaguila30/'">
-            <div class="icon"><i class="fab fa-pinterest"></i></div>
-            <span>Pinterest</span>
-          </div>
+  <div id="hero" class="gradient-background">
+    <div class="content">
+      <h1>Hello,<br>I'm Josh</h1>
+      <p>
+        I'm Joshua Aguila, a BSIT student driven by a passion for tech growth. Outside academics, I love reading,
+        singing, and modeling as creative outlets, with a special focus on web design. Check my profiles down below!
+      </p>
+      <div class="wrapper">
+        <div class="socmed" onclick="document.location='https://www.facebook.com/theycallme.fj'">
+          <div class="icon"><i class="fab fa-facebook"></i></div>
+          <span>Facebook</span>
+        </div>
+        <div class="socmed" onclick="document.location='https://x.com/theycallme_fj'">
+          <div class="icon"><i class="fab fa-twitter"></i></div>
+          <span>Twitter</span>
+        </div>
+        <div class="socmed" onclick="document.location='https://www.instagram.com/theycallme_fj/'">
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <span>Instagram</span>
+        </div>
+        <div class="socmed" onclick="document.location='https://ph.pinterest.com/franceaguila30/'">
+          <div class="icon"><i class="fab fa-pinterest"></i></div>
+          <span>Pinterest</span>
         </div>
       </div>
     </div>
   </div>
-  <img src="IMG/profile.jpg" alt="pfp" class="ftimg">
-  <div class="background">
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
   </div>
+  <img src="IMG/profile.jpg" alt="pfp" class="ftimg">
   </div>
   </div>
 
